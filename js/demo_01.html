@@ -26,6 +26,25 @@
     find_index("abc", "bcd");
 
 
+    function find_index_forLoop(str, s1) {
+        for (var i = 0; i < str.length; i++) {
+            var temp = '';
+            for (var j = 0; j < s1.length; j++) {
+                temp += str[i + j] ? str[i + j] : "";
+            }
+            console.log(temp,"temp--++");
+            if (temp === s1) {
+                return i;
+            }else if(i===str.length-1){
+                return -1;
+            }
+        }
+
+    }
+
+    console.log(find_index_forLoop("abc", "bc"));
+
+
     // 把 str中出现的s1替换为s2
     // 比如 replace_str("abcdbc", "bc", "kk") -> akkdkk
     function replace_str(str, s1, s2) {
