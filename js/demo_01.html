@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    // "abc" -> "cba"
+    function reverse_str(str) {
+        return str.split("").reverse().join("");
+    }
+
+    reverse_str("abc");
+
+
+    // 查找s1 在 str里面出现的第一个下标
+    // 比如 find_index("abc", "bc") == 1
+    // find_index("abc", "bcd") == -1
+    function find_index(str, s1) {
+        return str.indexOf(s1);
+    }
+
+    find_index("abc", "bc");
+    find_index("abc", "bcd");
+
+
+    // 把 str中出现的s1替换为s2
+    // 比如 replace_str("abcdbc", "bc", "kk") -> akkdkk
+    function replace_str(str, s1, s2) {
+        var reg = new RegExp(s1, "g");
+        return str.replace(reg, s2);
+    }
+
+    replace_str("abcdbc", "bc", "kk");
+
+</script>
+</body>
+</html>
